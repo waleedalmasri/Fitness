@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Fitness</string>
+    <string name="weight">Weight(kgm)</string>
+    <string name="name">Name</string>
+    <string name="height">Height(cm)</string>
+    <string name="bmi">BMI</string>
+    <string name="bmi_value">BMI Value</string>
+    <string name="save">Save</string>
+    <string name="counter">Counter</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
+    <string name="hh">HH</string>
+    <string name="mm">MM</string>
+    <string name="ss">SS</string>
+    <string name="delete">Delete</string>
+    <string name="hh_mm_ss">HH:MM:SS</string>
+
+
+
+    <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+</resources>

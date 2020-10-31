@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Counter">
+
+    <ImageView
+        android:id="@+id/imageViewLogo2"
+        style="@style/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo2" />
+
+    <EditText
+        android:id="@+id/editTextHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewLogo2"
+        android:hint="@string/hh"
+        android:inputType="number"
+        style="@style/timerValues"
+        />
+
+    <EditText
+        android:id="@+id/editTextMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewLogo2"
+        android:layout_toRightOf="@+id/editTextHours"
+        android:hint="@string/mm"
+        android:inputType="number"
+        style="@style/timerValues"
+        android:layout_toEndOf="@+id/editTextHours" />
+
+    <EditText
+        android:id="@+id/editTextSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewLogo2"
+        android:layout_toRightOf="@+id/editTextMinutes"
+        android:hint="@string/ss"
+        android:inputType="number"
+        style="@style/timerValues"
+        android:layout_marginRight="30dp"
+        android:layout_toEndOf="@+id/editTextMinutes"
+        android:layout_marginEnd="30dp" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextHours"
+        android:hint="@string/hh_mm_ss"
+        style="@style/nameEditTex"
+
+        />
+
+    <Button
+        android:id="@+id/btnStart"
+        style="@style/timerButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextTime"
+        android:onClick="btnStartOnClick"
+        android:text="@string/start" />
+
+    <Button
+        android:id="@+id/btnStop"
+        style="@style/timerButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextTime"
+        android:layout_toRightOf="@+id/btnStart"
+        android:onClick="btnStopOnClick"
+        android:text="@string/stop"
+        />
+
+    <Button
+        android:id="@+id/btnReset"
+        style="@style/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStop"
+        android:layout_alignParentRight="true"
+        android:onClick="btnResetOnClick"
+        android:text="@string/reset"
+        android:layout_alignParentEnd="true" />
+    <Button
+        android:id="@+id/btnBmi"
+        style="@style/counterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnReset"
+        android:layout_alignParentRight="true"
+        android:onClick="btnBmiOnClick"
+        android:text="@string/bmi"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

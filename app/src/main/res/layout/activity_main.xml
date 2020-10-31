@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        style="@style/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        style="@style/nameEditTex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewLogo"
+        android:hint="@string/name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextHeight"
+        style="@style/heightEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextName"
+        android:hint="@string/height"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        style="@style/weightEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextName"
+        android:layout_toEndOf="@+id/editTextHeight"
+        android:layout_toRightOf="@+id/editTextHeight"
+        android:hint="@string/weight"
+        android:inputType="number" />
+
+    <Spinner
+        android:id="@+id/spinnerGender"
+        style="@style/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextName"
+        android:layout_toEndOf="@+id/editTextWeight"
+        android:layout_toRightOf="@+id/editTextWeight"
+        android:entries="@array/genders" />
+
+    <TextView
+        android:id="@+id/textViewBMI"
+        style="@style/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextHeight"
+        android:hint="@string/bmi_value" />
+
+    <Button
+        android:id="@+id/btnBMI"
+        style="@style/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewBMI"
+        android:onClick="btnBmiOnClick"
+        android:text="@string/bmi" />
+
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewBMI"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@+id/btnBMI"
+        android:onClick="btnSaveOnClick"
+        android:text="@string/save" />
+
+
+    <Button
+        android:id="@+id/btnClear"
+        style="@style/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSave"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:onClick="btnClearOnClick"
+        android:text="@string/delete" />
+
+    <Button
+        style="@style/counterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnClear"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:onClick="btnCounterOnClick"
+        android:text="@string/counter" />
+
+
+</RelativeLayout>
